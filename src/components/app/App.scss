@@ -1,2 +1,22 @@
 .App {
+  background-color: green;
+  font-size: 62.5%;
+
+  h1, h2 h3, h4, h5, h6 {
+    color: #313131;
+    // font-family: 'opensans-bold', sans-serif;
+    font-weight: normal;
+  }
+
+  .row {
+    width: 96%;
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  .column {
+    position: relative;
+    padding: 0 20px;
+    border: 7px solid red;
+  }
 }
