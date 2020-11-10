@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../navigation/';
-import Hero from '../hero/';
+import Navigation from '../navigation';
+import Hero from '../hero';
 import './Header.scss';
 
 function Header() {
