@@ -5,7 +5,8 @@ function Hero() {
 
   return (
     <div>
-      <img alt="the Hero image" src={heroImage} />
+      {/* <img alt="the Hero image" src={heroImage} /> */}
+      
     </div>
   )
 }
