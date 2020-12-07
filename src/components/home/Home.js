@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import mobilePhoneServices from "services/mobilePhoneServices";
+import "./Home.scss";
 
 class Home extends Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class Home extends Component {
     mobilePhoneServices
       .getAll()
       .then(result => {
-        console.log(result.data);
         this.setState({
           mobilePhones: result.data
         });
@@ -25,19 +25,22 @@ class Home extends Component {
     const allMobile = mobilePhones.map(phone => {
 
       return (
-        <div>
-          <p key={phone.id}>{phone.product_model}</p>
-          <p key={phone.id}>{phone.product_name}</p>
-        </div>
+        <ul key={phone.id} className="list-items">
+          <li className="list-item">
+            <div className="product-img">
+              <img className="item-img" alt="Images of products" src />
+            </div>
+            <div className="product-model">{phone.product_model}</div>
+            <div className="product-name">{phone.product_name}</div>
+          </li>
+        </ul>
       )
     })
     
     return (
       <div>
         <h1>Product Home</h1>
-        <div>
           {allMobile}
-        </div>
       </div>
     )
   }
